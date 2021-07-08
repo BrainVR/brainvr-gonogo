@@ -12,4 +12,4 @@ for(filepath in pths){
   df_out <- rbind(df_out, temp_out)
 }
 
-write.csv(df_out, "gonogo-preprocessed.csv")
+write.csv(df_out, "gonogo-preprocessed.csv", row.names = FALSE,quote = FALSE)
