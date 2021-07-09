@@ -1,4 +1,6 @@
 # load libraries
+library(dplyr)
+library(tidyr)
 pths <- list.files("C:\\Users\\hejtm\\Downloads\\RAW_DATA_final\\GoNogoPEBL",
                    full.names = TRUE)
 df_out <- data.frame()
@@ -8,7 +10,7 @@ for(filepath in pths){
   cat(nrow(df_experiment), " rows\n")
   if(nrow(df_experiment) != 340) next
   df_experiment <- preprocess_experiment(df_experiment)
-  temp_out <- prepare_export(df_experiment)
+  temp_out <- prepare_export(df_experiment, omit.na = TRUE)
   df_out <- rbind(df_out, temp_out)
 }
 
