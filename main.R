@@ -1,5 +1,6 @@
 library(tidyverse)
-df_experiment <- read.table("data/pebl/gonogo-ZK210612KT.csv", header = TRUE, sep = ",")
+df_experiment <- read.table("tests/data/pebl/gonogo-ZK210612KT.csv", header = TRUE, 
+                            sep = ",")
 
 df_experiment <- preprocess_experiment(df_experiment)
 head(df_experiment)
