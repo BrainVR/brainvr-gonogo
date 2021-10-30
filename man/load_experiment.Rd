@@ -4,16 +4,18 @@
 \alias{load_experiment}
 \title{Title}
 \usage{
-load_experiment(pth, skip_first_section = TRUE)
+load_experiment(pth, skip_first_section = TRUE, preprocess = TRUE)
 }
 \arguments{
 \item{pth}{}
 
 \item{skip_first_section}{some files ahve multiple starting points. if true,
 we simply skip to the last portion}
+
+\item{preprocess}{shoul dthe data be automatically processed. Calls `preprocess_experiment` function}
 }
 \value{
-
+data.frame
 }
 \description{
 Title
